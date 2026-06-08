@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moon Mail Love Letter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="starField" class="star-field"></div>
+  <div id="shootingStars" class="shooting-stars"></div>
+
+  <audio id="bgMusic" loop preload="auto"></audio>
+
+  <main class="app">
+    <section id="moonScreen" class="screen moon-screen active">
+      <div class="night-glow"></div>
+
+      <div class="intro-text">
+        <p class="eyebrow">secret delivery from the moon</p>
+        <h1 id="siteTitle">Moon Mail</h1>
+        <p id="siteSubtitle">Tekan bulan untuk membuka surat rahasia.</p>
+      </div>
+
+      <button id="moonButton" class="moon-button" aria-label="Buka surat dari bulan">
+        <span class="moon-crater crater-1"></span>
+        <span class="moon-crater crater-2"></span>
+        <span class="moon-crater crater-3"></span>
+        <span class="moon-crater crater-4"></span>
+        <span class="moon-shine"></span>
+      </button>
+
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+
+      <button id="musicButton" class="music-button" type="button">♫ Musik</button>
+    </section>
+
+    <section id="letterScreen" class="screen letter-screen" aria-live="polite">
+      <div class="moon-small"></div>
+
+      <article id="letterCard" class="letter-card">
+        <div class="letter-topbar">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="letter-label">Moon Mail / Private Letter</p>
+        <h2 id="letterTitle">Untuk Kamu</h2>
+        <div id="typedLetter" class="typed-letter"></div>
+        <button id="skipButton" class="skip-button" type="button">Skip</button>
+      </article>
+
+      <section id="gallerySection" class="gallery-section hidden">
+        <p class="gallery-title">Sentuh bintang-bintang kenangan ✦</p>
+        <div id="starGallery" class="star-gallery"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="photoModal" class="photo-modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="closeModal" class="close-modal" type="button">×</button>
+      <img id="modalImage" src="" alt="Foto kenangan" />
+      <p id="modalCaption"></p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
